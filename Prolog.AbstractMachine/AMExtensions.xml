@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AMExtensions>
+	<Predicates>
+    <!-- Input/Output facilities -->
+    <ExternalPredicate name="fopen/2" path="Axiom.IO.dll" />
+    <ExternalPredicate name="fclose/0" path="Axiom.IO.dll" />
+    <ExternalPredicate name="fread/1" path="Axiom.IO.dll" />
+    <ExternalPredicate name="freadline/1" path="Axiom.IO.dll" />
+    <ExternalPredicate name="fwrite/1" path="Axiom.IO.dll" />
+    <ExternalPredicate name="readp/2" path="Axiom.IO.dll" />
+    <ExternalPredicate name="write_variables/1" path="Axiom.IO.dll" />
+    
+    <!-- Operating System facilities -->
+    <ExternalPredicate name="chdir/1" path="Axiom.OS.dll" />
+    <ExternalPredicate name="copyfile/2" path="Axiom.OS.dll" />
+    <ExternalPredicate name="cwd/1" path="Axiom.OS.dll" />
+    <ExternalPredicate name="deletefile/1" path="Axiom.OS.dll" />
+    <ExternalPredicate name="fexists/1" path="Axiom.OS.dll" />
+    <ExternalPredicate name="movefile/2" path="Axiom.OS.dll" />
+    <ExternalPredicate name="renamefile/2" path="Axiom.OS.dll" />
+    
+    <!-- Networking -->
+    <ExternalPredicate name="socket/1" path="Axiom.Networking.dll" />
+    <ExternalPredicate name="socket_accept/1" path="Axiom.Networking.dll" />
+    <ExternalPredicate name="socket_bind/3" path="Axiom.Networking.dll" />
+    <ExternalPredicate name="socket_close/1" path="Axiom.Networking.dll" />
+    <ExternalPredicate name="socket_connect/3" path="Axiom.Networking.dll" />
+    <ExternalPredicate name="socket_listen/2" path="Axiom.Networking.dll" />
+    <ExternalPredicate name="socket_send/2" path="Axiom.Networking.dll" />
+    <ExternalPredicate name="socket_receive/3" path="Axiom.Networking.dll" />
+
+    <!-- ISO-Prolog predicates -->
+    <ExternalPredicate name="consult/1" path="Axiom.ISO.dll" />
+
+  </Predicates>
+</AMExtensions>

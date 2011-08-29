@@ -1,0 +1,116 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Axiom.Runtime", "Prolog.AbstractMachine\Axiom.Runtime.csproj", "{E9948868-DC3F-4A13-8226-96894A49C4C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Axiom.Compiler", "Prolog.Compiler\Axiom.Compiler.csproj", "{6CAC9DEA-25BE-4A12-BEAB-BC6EE06C7F5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembler Tool", "Assembler Tool\Assembler Tool.csproj", "{67535BF6-09B6-4F79-83AF-5071F2FA7FC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compiler Tool", "Compiler Tool\Compiler Tool.csproj", "{8BF3E6EB-CA90-4F89-92B1-E850175E090C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Axiom Base Library", "Axiom Base Library", "{5311C2CA-A3CF-4693-BDC3-E9DC2CC4E0B6}"
+	ProjectSection(SolutionItems) = preProject
+		Prolog.AbstractMachine\AMExtensions.xml = Prolog.AbstractMachine\AMExtensions.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Axiom.IO", "Axiom Base Library\Axiom.IO\Axiom.IO.csproj", "{9A0878CF-0801-4109-9878-FCBBB53CA386}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Axiom.OS", "Axiom Base Library\Axiom.OS\Axiom.OS.csproj", "{1B82795D-3B12-48D7-A35C-4903A595A0E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Axiom.Networking", "Axiom Base Library\Axiom.Networking\Axiom.Networking.csproj", "{09D77239-FA60-4F1B-ADCF-A4E5D516AFF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Axiom.ISO", "Axiom Base Library\Axiom.ISO\Axiom.ISO.csproj", "{9C4C001A-9885-4D03-9604-B4C874E213DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Axiom.Math", "Axiom.Math\Axiom.Math.csproj", "{A336A991-F5F3-4DC1-BC31-56D3FF23A7D2}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 10
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Assembler\u0020Tool\\Assembler\u0020Tool.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = Assembler\u0020Tool\\
+		SccProjectUniqueName2 = Compiler\u0020Tool\\Compiler\u0020Tool.csproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = Compiler\u0020Tool\\
+		SccProjectUniqueName3 = Prolog.AbstractMachine\\Axiom.Runtime.csproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = Prolog.AbstractMachine\\
+		SccProjectUniqueName4 = Prolog.Compiler\\Axiom.Compiler.csproj
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = Prolog.Compiler\\
+		SccProjectUniqueName5 = Axiom\u0020Base\u0020Library\\Axiom.IO\\Axiom.IO.csproj
+		SccProjectTopLevelParentUniqueName5 = Axiom\u0020Runtime\u0020Environment.sln
+		SccLocalPath5 = .
+		SccProjectFilePathRelativizedFromConnection5 = Axiom\u0020Base\u0020Library\\Axiom.IO\\
+		SccProjectUniqueName6 = Axiom\u0020Base\u0020Library\\Axiom.ISO\\Axiom.ISO.csproj
+		SccProjectTopLevelParentUniqueName6 = Axiom\u0020Runtime\u0020Environment.sln
+		SccLocalPath6 = .
+		SccProjectFilePathRelativizedFromConnection6 = Axiom\u0020Base\u0020Library\\Axiom.ISO\\
+		SccProjectUniqueName7 = Axiom\u0020Base\u0020Library\\Axiom.Networking\\Axiom.Networking.csproj
+		SccProjectTopLevelParentUniqueName7 = Axiom\u0020Runtime\u0020Environment.sln
+		SccLocalPath7 = .
+		SccProjectFilePathRelativizedFromConnection7 = Axiom\u0020Base\u0020Library\\Axiom.Networking\\
+		SccProjectUniqueName8 = Axiom\u0020Base\u0020Library\\Axiom.OS\\Axiom.OS.csproj
+		SccProjectTopLevelParentUniqueName8 = Axiom\u0020Runtime\u0020Environment.sln
+		SccLocalPath8 = .
+		SccProjectFilePathRelativizedFromConnection8 = Axiom\u0020Base\u0020Library\\Axiom.OS\\
+		SccProjectUniqueName9 = Axiom.Math\\Axiom.Math.csproj
+		SccProjectTopLevelParentUniqueName9 = Axiom\u0020Runtime\u0020Environment.sln
+		SccLocalPath9 = .
+		SccProjectFilePathRelativizedFromConnection9 = Axiom.Math\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9948868-DC3F-4A13-8226-96894A49C4C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9948868-DC3F-4A13-8226-96894A49C4C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9948868-DC3F-4A13-8226-96894A49C4C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9948868-DC3F-4A13-8226-96894A49C4C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CAC9DEA-25BE-4A12-BEAB-BC6EE06C7F5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CAC9DEA-25BE-4A12-BEAB-BC6EE06C7F5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CAC9DEA-25BE-4A12-BEAB-BC6EE06C7F5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CAC9DEA-25BE-4A12-BEAB-BC6EE06C7F5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67535BF6-09B6-4F79-83AF-5071F2FA7FC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67535BF6-09B6-4F79-83AF-5071F2FA7FC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67535BF6-09B6-4F79-83AF-5071F2FA7FC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67535BF6-09B6-4F79-83AF-5071F2FA7FC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BF3E6EB-CA90-4F89-92B1-E850175E090C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BF3E6EB-CA90-4F89-92B1-E850175E090C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BF3E6EB-CA90-4F89-92B1-E850175E090C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BF3E6EB-CA90-4F89-92B1-E850175E090C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A0878CF-0801-4109-9878-FCBBB53CA386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A0878CF-0801-4109-9878-FCBBB53CA386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A0878CF-0801-4109-9878-FCBBB53CA386}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A0878CF-0801-4109-9878-FCBBB53CA386}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B82795D-3B12-48D7-A35C-4903A595A0E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B82795D-3B12-48D7-A35C-4903A595A0E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B82795D-3B12-48D7-A35C-4903A595A0E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B82795D-3B12-48D7-A35C-4903A595A0E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09D77239-FA60-4F1B-ADCF-A4E5D516AFF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09D77239-FA60-4F1B-ADCF-A4E5D516AFF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09D77239-FA60-4F1B-ADCF-A4E5D516AFF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09D77239-FA60-4F1B-ADCF-A4E5D516AFF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C4C001A-9885-4D03-9604-B4C874E213DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C4C001A-9885-4D03-9604-B4C874E213DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C4C001A-9885-4D03-9604-B4C874E213DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C4C001A-9885-4D03-9604-B4C874E213DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A336A991-F5F3-4DC1-BC31-56D3FF23A7D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A336A991-F5F3-4DC1-BC31-56D3FF23A7D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A336A991-F5F3-4DC1-BC31-56D3FF23A7D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A336A991-F5F3-4DC1-BC31-56D3FF23A7D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9A0878CF-0801-4109-9878-FCBBB53CA386} = {5311C2CA-A3CF-4693-BDC3-E9DC2CC4E0B6}
+		{1B82795D-3B12-48D7-A35C-4903A595A0E4} = {5311C2CA-A3CF-4693-BDC3-E9DC2CC4E0B6}
+		{09D77239-FA60-4F1B-ADCF-A4E5D516AFF5} = {5311C2CA-A3CF-4693-BDC3-E9DC2CC4E0B6}
+		{9C4C001A-9885-4D03-9604-B4C874E213DB} = {5311C2CA-A3CF-4693-BDC3-E9DC2CC4E0B6}
+		{A336A991-F5F3-4DC1-BC31-56D3FF23A7D2} = {5311C2CA-A3CF-4693-BDC3-E9DC2CC4E0B6}
+	EndGlobalSection
+EndGlobal

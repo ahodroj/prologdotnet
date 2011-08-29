@@ -1,0 +1,95 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Axiom.Compiler.Framework.Generators
+{
+    public sealed class OpCodes
+    {
+        public const int
+            Allocate = 1,
+            Call = 2,
+            Label = 3,
+            Cut = 4,
+            Deallocate = 5,
+            Execute = 6,
+            Fail = 7,
+            Fcall = 8,
+            Get_Constant = 9,
+            Get_List = 10,
+            Get_Structure = 11,
+            Get_Value = 12,
+            Get_Variable = 13,
+            Halt = 14,
+            Proceed = 15,
+            Put_Constant = 16,
+            Put_List = 17,
+            Put_Structure = 18,
+            Put_Unsafe_Value = 19,
+            Put_Value = 20,
+            Put_Variable = 21,
+            Retry_Me_Else = 22,
+            Set_Constant = 23,
+            Set_Local_Value = 24,
+            Set_Value = 25,
+            Set_Variable = 26,
+            Set_Void = 27,
+            Trust_Me = 28,
+            Try_Me_Else = 29,
+            Unify_Constant = 30,
+            Unify_Local_Value = 31,
+            Unify_Value = 32,
+            Unify_Variable = 33,
+            Unify_Void = 34,
+            Write = 35,
+            CallVar = 36,
+            ExecuteVar = 37,
+            BCall = 38,
+            Nop = 39;
+
+        public static readonly string[] OpcodeStrings = {
+            "Unknwon",
+            "allocate",
+            "call",
+            "CodeLabel",
+            "cut",
+            "deallocate",
+            "execute",
+            "fail",
+            "fcall",
+            "get_constant",
+            "get_list",
+            "get_structure",
+            "get_value",
+            "get_variable",
+            "halt",
+            "proceed",
+            "put_constant",
+            "put_list",
+            "put_structure",
+            "put_unsafe_value",
+            "put_value",
+            "put_variable",
+            "retry_me_else",
+            "set_constant",
+            "set_local_value",
+            "set_value",
+            "set_variable",
+            "set_void",
+            "trust_me",
+            "try_me_else",
+            "unify_constant",
+            "unify_local_value",
+            "unify_value",
+            "unify_variable",
+            "unify_void",
+            "write",
+            "callvar",
+            "executevar",
+            "bcall",
+            "nop"
+        };
+
+            
+    }
+}

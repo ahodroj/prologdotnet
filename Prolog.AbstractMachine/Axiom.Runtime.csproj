@@ -1,0 +1,183 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E9948868-DC3F-4A13-8226-96894A49C4C8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Prolog.AbstractMachine</RootNamespace>
+    <AssemblyName>Axiom.Runtime</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractDataArea.cs" />
+    <Compile Include="AbstractMachineState.cs" />
+    <Compile Include="AbstractTerm.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Unit Tests\AbstractTerm.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractAssemblyCache.cs" />
+    <Compile Include="AbstractInstruction.cs" />
+    <Compile Include="AbstractMachineFactory.cs" />
+    <Compile Include="AbstractNonDeterministicPredicate.cs" />
+    <Compile Include="AbstractPredicate.cs" />
+    <Compile Include="AbstractProgram.cs" />
+    <Compile Include="AbstractTrail.cs" />
+    <Compile Include="AMAssemblyCache.cs" />
+    <Compile Include="AMFactory.cs" />
+    <Compile Include="AMForeignPredicate.cs" />
+    <Compile Include="AMForeignPredicateArgument.cs" />
+    <Compile Include="AMHeap.cs" />
+    <Compile Include="AMInstructionSet.cs" />
+    <Compile Include="AxiomReleaseInformation.cs" />
+    <Compile Include="Builtins\Comparison\Numeric\NotEqualsPredicate.cs" />
+    <Compile Include="Builtins\Meta\IsPredicate.cs" />
+    <Compile Include="Builtins\OOP\get_property_3.cs" />
+    <Compile Include="Builtins\OOP\invoke_3.cs" />
+    <Compile Include="Builtins\OOP\object_2.cs" />
+    <Compile Include="Builtins\OOP\set_property_3.cs" />
+    <Compile Include="Instructions\CallVariableInstruction.cs" />
+    <Compile Include="Instructions\FailInstruction.cs" />
+    <Compile Include="Instructions\ExecuteVariableInstruction.cs" />
+    <Compile Include="Instructions\ProcedureInstruction.cs" />
+    <Compile Include="PluginHost\AMExtensions.cs" />
+    <Compile Include="PluginHost\AMPluginManager.cs" />
+    <Compile Include="AMPredicateSet.cs" />
+    <Compile Include="AMProgram.cs" />
+    <Compile Include="AMTrail.cs" />
+    <Compile Include="Builtins\Comparison\Numeric\EqualsPredicate.cs" />
+    <Compile Include="Builtins\Comparison\Numeric\GreaterThanEqualPredicate.cs" />
+    <Compile Include="Builtins\Comparison\Numeric\GreaterThanPredicate.cs" />
+    <Compile Include="Builtins\Comparison\Numeric\LessThanEqualPredicate.cs" />
+    <Compile Include="Builtins\Comparison\Numeric\LessThanPredicate.cs" />
+    <Compile Include="Builtins\Control\CallPredicate.cs" />
+    <Compile Include="Builtins\Equality\NotUnifiablePredicate.cs" />
+    <Compile Include="Builtins\Equality\UnifyPredicate.cs" />
+    <Compile Include="Builtins\IO\PutPredicate.cs" />
+    <Compile Include="Builtins\Meta\AtomPredicate.cs" />
+    <Compile Include="Builtins\Meta\BoundPredicate.cs" />
+    <Compile Include="Builtins\Meta\CharPredicate.cs" />
+    <Compile Include="Builtins\Meta\FreePredicate.cs" />
+    <Compile Include="Builtins\Meta\IntegerPredicate.cs" />
+    <Compile Include="Builtins\Meta\NonVarPredicate.cs" />
+    <Compile Include="Builtins\Meta\VarPredicate.cs" />
+    <Compile Include="Builtins\OS\WaitPredicate.cs" />
+    <Compile Include="Builtins\Processing\ListToStructurePredicate.cs" />
+    <Compile Include="Builtins\TermEvaluator.cs" />
+    <Compile Include="Builtins\IO\Get0Predicate.cs" />
+    <Compile Include="Builtins\IO\SkipPredicate.cs" />
+    <Compile Include="Builtins\IO\WriteLnPredicate.cs" />
+    <Compile Include="Builtins\Unit Tests\BuiltinTests.cs" />
+    <Compile Include="Builtins\IO\NlPredicate.cs" />
+    <Compile Include="Builtins\IO\WritePredicate.cs" />
+    <Compile Include="Builtins\Unit Tests\EvaluatorTests.cs" />
+    <Compile Include="Choicepoint.cs" />
+    <Compile Include="ConstantTerm.cs" />
+    <Compile Include="EnvironmentFrame.cs" />
+    <Compile Include="HeapNode.cs" />
+    <Compile Include="IAbstractMachinePredicate.cs" />
+    <Compile Include="Instructions\AllocateInstruction.cs" />
+    <Compile Include="Instructions\BCallInstruction.cs" />
+    <Compile Include="Instructions\CallInstruction.cs" />
+    <Compile Include="Instructions\CutInstruction.cs" />
+    <Compile Include="Instructions\DeallocateInstruction.cs" />
+    <Compile Include="Instructions\ExecuteInstruction.cs" />
+    <Compile Include="Instructions\FCallInstruction.cs" />
+    <Compile Include="Instructions\GetConstantInstruction.cs" />
+    <Compile Include="Instructions\GetListInstruction.cs" />
+    <Compile Include="Instructions\GetStructureInstruction.cs" />
+    <Compile Include="Instructions\GetValueInstruction.cs" />
+    <Compile Include="Instructions\GetVariableInstruction.cs" />
+    <Compile Include="Instructions\ProceedInstruction.cs" />
+    <Compile Include="Instructions\PutConstantInstruction.cs" />
+    <Compile Include="Instructions\HaltInstruction.cs" />
+    <Compile Include="Instructions\NopInstruction.cs" />
+    <Compile Include="Instructions\PutListInstruction.cs" />
+    <Compile Include="Instructions\PutStructureInstruction.cs" />
+    <Compile Include="Instructions\PutUnsafeValueInstruction.cs" />
+    <Compile Include="Instructions\PutValueInstruction.cs" />
+    <Compile Include="Instructions\PutVariableInstruction.cs" />
+    <Compile Include="Instructions\PutYVariableInstruction.cs" />
+    <Compile Include="Instructions\RetryMeElseInstruction.cs" />
+    <Compile Include="Instructions\SetConstantInstruction.cs" />
+    <Compile Include="Instructions\SetLocalValueInstruction.cs" />
+    <Compile Include="Instructions\SetValueInstruction.cs" />
+    <Compile Include="Instructions\SetVariableInstruction.cs" />
+    <Compile Include="Instructions\SetVoidInstruction.cs" />
+    <Compile Include="Instructions\TrustMeInstruction.cs" />
+    <Compile Include="Instructions\TryMeElseInstruction.cs" />
+    <Compile Include="Instructions\UnifyConstantInstruction.cs" />
+    <Compile Include="Instructions\UnifyLocalValueInstruction.cs" />
+    <Compile Include="Instructions\UnifyValueInstruction.cs" />
+    <Compile Include="Instructions\UnifyVariableInstruction.cs" />
+    <Compile Include="Instructions\UnifyVoidInstruction.cs" />
+    <Compile Include="Instructions\Unit Tests\AbstractIntsructionsTests.cs" />
+    <Compile Include="ListTerm.cs" />
+    <Compile Include="ObjectTerm.cs" />
+    <Compile Include="PluginHost\Attributes.cs" />
+    <Compile Include="PluginHost\ExternalPredicate.cs" />
+    <Compile Include="PluginHost\Unit Tests\ExternalsTests.cs" />
+    <Compile Include="ProgramClause.cs" />
+    <Compile Include="ProgramNode.cs" />
+    <Compile Include="StructureTerm.cs" />
+    <Compile Include="Unit Tests\Choicepoint.cs" />
+    <Compile Include="Unit Tests\ConstantTerm.cs" />
+    <Compile Include="Unit Tests\AMProgram.cs" />
+    <Compile Include="Unit Tests\AMHeap.cs" />
+    <Compile Include="Unit Tests\AbstractMachineState.cs" />
+    <Compile Include="Unit Tests\AMTrail.cs" />
+    <Compile Include="Unit Tests\AMInstructionSet.cs" />
+    <Compile Include="Unit Tests\EnvironmentFrame.cs" />
+    <Compile Include="Unit Tests\ListTerm.cs" />
+    <Compile Include="Unit Tests\ObjectTerm.cs" />
+    <Compile Include="Unit Tests\StructureTerm.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AMExtensions.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>copy "..\..\AMExtensions.xml" "..\..\..\Assembler Tool\bin\debug"
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>
