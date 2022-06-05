@@ -1,6 +1,8 @@
 # Table of Contents
 * [What is Prolog?](https://github.com/ahodroj/prologdotnet#overview)
 * [Logic Programming Use Cases](https://github.com/ahodroj/prologdotnet#applicable-use-cases)
+* [Language Design](https://github.com/ahodroj/prologdotnet#languagecompiler-design)
+* 
 
 # What is Prolog?
 
@@ -20,10 +22,11 @@ Prolog is well-suited for specific tasks that benefit from rule-based logical qu
 
 
 
-# Language/Compiler Design
+# Quickstart
 
-## Fibonacci Series & Factorial implementation in first-order logic (Prolog)
+## Prolog code to .NET runtime
 ```
+% implementaion of fibonacci series and factorial functions in prolog
 :- class('MyMath').
 
 factorial(0,1).
