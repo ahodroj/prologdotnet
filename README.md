@@ -161,5 +161,73 @@ get_property(+ClassTypeOrObject, +PropertyName, ?Value)
 set_property(+ClassTypeOrObject, +PropertyName, +Value)
 ```
 
+The first argument term of each predicate is the instantiated object or a class type (in case we are getting/setting a static property of a class). The second argument is the property name. The third argument in get_property/3 is unified with the value returned from the property, while in set_property/3, it’s the value that the property needs to be set to. The following is an example of getting a property that checks if a System.Collections.ArrayList object has no elements by asserting that the ArrayList.Count property returns 0:
+
+```
+% TRUE if X.Count == 0 (X is an object of type ArrayList)
+empty_array_list(X) :- get_property(X, 'Count', 0).
+```
+The following is an example of using set_property to set the Max property of a Calculator class:
+
+```
+% Similar to the C# code
+%    Calculator.Max = 3;
+set_property('Calculator', 'Max', 3).
+```
+
+# Built-In/Standard Prolog Predicates
+The Prolog.NET library currently has a limited set of built-in predicates that are common to Prolog implementations. The following standard Prolog predicates are available:
+
+## I/O
+```
+write/1 
+writeln/1 
+nl/0 
+get0/1 
+skip/1 
+put/1 
+```
+
+## Comparison
+```
+=/=/2 
+=:=/2 
+>=/2 
+=</2 
+</2 
+>/2
+```
+
+## Control
+```
+call/1
+```
+
+## Equality & Unification
+```
+=/2 
+\=/2
+```
+
+## Meta-Logic
+```
+is/2 
+atom/1 
+bound/1 
+char/1 
+free/1 
+var/1 
+nonvar/1 
+integer/1
+```
+
+## .NET Interoperability
+```
+object/2 
+invoke/3 
+::/2 
+get_property/3 
+set_property/3
+```
 
 
