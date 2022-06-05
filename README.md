@@ -192,6 +192,77 @@ The following is an example of using set_property to set the Max property of a C
 set_property('Calculator', 'Max', 3).
 ```
 
+# Code Examples
+## Basics
+### Hello, World
+```
+% hello world
+main :- write(‘Hello, World!’), nl.
+```
+
+### Deductive Reasoning
+```
+% Facts
+male(john).
+male(jerry).
+male(jack).
+parent(jack, jerry). 
+parent(jack, john).
+
+% Rules
+sibling(X, Y) :- parent(Z, X), parent(Z, Y), X \== Y.
+brother(X, Y) :- sibling(X, Y), male(X).
+
+% are john and jerry brothers? 
+main :- brother(john, jerry).
+
+```
+
+
+## Mathematical Functions
+### Factorial 
+```
+factorial(0,1). 
+
+factorial(N,F) :-  
+   N>0, 
+   N1 is N-1, 
+   factorial(N1,F1), 
+   F is N * F1.
+
+% find the factorial of 3, store it in W
+main :- factorial(3, W). 
+```
+
+### Fibonacci Series
+```
+fib(0,1).
+fib(1,1).
+fib(N,F) :- N > 1, N1 is N - 1, N2 is N - 2, fib(N1,F1), fib(N2,F2), F is F1+F2
+
+main :- fib(3, W).
+
+```
+
+### Power function
+```
+power(_,0,1).
+power(B,E,R) :- E > 0,!, E1 is E -1, power(B,E1,R1), R is B * R1.
+
+% calculate 3^2, bind it to W
+main :- power(3,2,W).
+
+```
+
+### Square Root
+```
+sqrt(X, Y) :- X is Y * Y.
+
+% is 3 the square root of 9? 
+main :- sqrt(9, 3). 
+
+```
+
 # Built-In/Standard Prolog Predicates
 The Prolog.NET library currently has a limited set of built-in predicates that are common to Prolog implementations. The following standard Prolog predicates are available:
 
