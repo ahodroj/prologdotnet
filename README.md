@@ -82,4 +82,84 @@ compile into an exe through: ```prologc.exe /target:exe hello.pro ```
 
 There are five built-in predicates in Prolog.NET that allow using .NET objects and methods from Prolog: object/2, invoke/3, get_property/3, set_property/3, and ::/2. This section describes how each can be used in a Prolog program. In order to use the object-oriented predicates against classes and objects in an assembly or namespace, the using/1 or assembly/1 directives should be specified. The using/1 predicate takes a .NET namespace as its only argument, while the assembly/1 takes an assembly name. They both load an assembly so that the class types defined in it can be used from Prolog. The following are examples of each:
 
+```
+using('System.Collections').   % reference a namespcae
+
+assembly('MyMath.dll').   % reference an assembly
+```
+
+## Object instantiation
+When the Prolog.NET runtime environment searches for the class type to be instantiated, it first looks in the assemblies that have been loaded via using/1. If not found, it will then look in the assemblies loaded via assembly/1. To instantiate an object from .NET the object/1 built-in predicate is used:
+
+```
+% Create an object of type ClassName, bind it to the ObjectTerm variable
+object(+ClassName, -ObjectTerm).
+```
+
+The first argument is an atom of the class type which is created and bound to the second argument, known as an object term. The following is an example of creating an ArrayList in Prolog:
+
+```
+arraylist(X) :- object('System.Collections.ArrayList', X). 
+```
+
+## Calling a Class/Object Method
+There are two ways to call methods from Prolog, either using the invoke/3 or ::/2 built-in predicate. The advantage of the latter is that it provides a more OOP-familiar syntax and its method’s return value can be evaluated using the is/2 predicate.
+
+The invoke/3 predicate takes three arguments. The first argument is the object term (or the class type name in case we are invoking a static method). The second argument is a functor representing the method name as well as aguments passed to it. Finally, the third term is unified with the value returned from invoked:
+
+```
+invoke(+ClassTypeOrObject, +MethodName(+Arguments...),?ReturnValue).
+```
+
+The following is an example of invoking the Add() method from a hypothetical ```Calc``` class: 
+
+```
+% create an object of type Calc, then call the Calc.Add() method
+
+dotnet_add(X,Y,Z) :- object('Calc', Obj), invoke(Obj, 'Add'(X,Y), Z)
+```
+
+Since the return value is unified with the last argument, querying the following two goals is similar:
+
+```
+% first definition, another way of saying:
+%  The sum of 1 and 2 shall be 3
+add :- dotnet_add(1,2,Z), Z = 3. 
+
+% Another similar definition  
+add2 :- dotnet_add(1,2,3).
+```
+
+Another way to invoke a method is by using the ::/2 built-in predicate, which has the following syntax:
+
+```
++ClassTypeOrObject :: +MethodName(+Args...)  
+```
+
+For instance, Calling the Console.WriteLine() method the following way:
+
+```
+% Console.WriteLine("Hello, World!"); 
+'Console'::'WriteLine'('Hello, World!'). 
+```
+
+The ::/2 predicate can be used in an is/2 expression. For example, rew-writing the above dotnet_add/3 rule using ::/2 would look like:
+
+```
+% create object O of type 'Calc', then bind the Z variable to the return value of Add()
+dotnet_add(X,Y,Z) :- object('Calc',O), Z is O::'Add'(X,Y).
+```
+
+## Getting/Setting Properties
+You can get and modify that values of class properties, which are responsible for setting and getting non-public variables in a class. The two predicates available to achieve this are: get_property/3 and set_property/3. Both of these predicates are used almost the same way as the invoke/3 predicate. The predicate signatures are:
+
+```
+% get the property value of class or object and unify it with a variable
+get_property(+ClassTypeOrObject, +PropertyName, ?Value) 
+
+% set the property of class or object to Value
+set_property(+ClassTypeOrObject, +PropertyName, +Value)
+```
+
+
 
