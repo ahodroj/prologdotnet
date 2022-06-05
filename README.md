@@ -219,7 +219,7 @@ main :- brother(john, jerry).
 ```
 
 
-## Mathematical Functions
+## Mathematical Examples
 ### Factorial 
 ```
 factorial(0,1). 
@@ -260,6 +260,50 @@ sqrt(X, Y) :- X is Y * Y.
 
 % is 3 the square root of 9? 
 main :- sqrt(9, 3). 
+
+```
+
+## List Examples
+### Size of a list
+```
+size([],0).
+size([H|T],N) :- size(T,N1), N is N1+1.
+
+main :- size([1,2,3,4],N).
+% N = 4
+```
+
+### Sum all elements in a list
+```
+sumlist([],0).
+sumlist([H|T],N) :- sumlist(T,N1), N is N1+H.
+
+main :- sumlist([1,1,1],S).
+% S = 3
+
+```
+
+### Quicksort algorithm
+```
+% quicksort(Xs, Ys) is true if Ys is a sorted permutation of the list Xs
+quicksort(Xs, Ys):-quicksort_1(Xs, Ys, []).
+  
+quicksort_1([], Ys, Ys).
+quicksort_1([X|Xs], Ys, Zs):-
+  partition(Xs, X, Ms, Ns),
+  quicksort_1(Ns, Ws, Zs),
+  quicksort_1(Ms, Ys, [X|Ws]).
+  
+% partition(Ls, X, Ms, Ns) is true if the list Ms contains the elements   
+%   of the list Ls which are less than or equal to X, and the list Ns     
+%   contains the elements of Ls which are greater than X.                 
+partition([K|L], X, M, [K|N]):-
+  X < K, !,
+  partition(L, X, M, N).
+partition([K|L], X, [K|M], N):-
+  partition(L, X, M, N).
+partition([], _, [], []).
+
 
 ```
 
