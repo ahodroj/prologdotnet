@@ -7,8 +7,12 @@ Prolog.NET provides an implementation of Prolog programming language on the .NET
 # Applicable Use Cases
 Prolog is well-suited for specific tasks that benefit from rule-based logical queries. Prolog is used a lot in NLP, particularly in syntax and computational semantics.
 
-* [link](http://example.com "Title").
-* [link](http://example.com "Title").
+* [Theorem proving](https://courses.cs.washington.edu/courses/cse341/98wi/CurrentQtr/lectures/pro1.pdf)
+* [Natural language processing](https://cs.union.edu/~striegnk/courses/nlp-with-prolog/html/)
+* [Pattern matching](https://cs.union.edu/~striegnk/courses/nlp-with-prolog/html/)
+* [Combinatorial test case generation](http://www.sfu.ca/~tjd/383summer2019/prolog_combinatorial.html)
+* [Symbolic Computation / Calculus](https://link.springer.com/chapter/10.1007/978-3-642-83213-0_6)
+* [Deductive Reasoning](https://link.springer.com/chapter/10.1007/978-3-642-83213-0_6)
 
 
 
