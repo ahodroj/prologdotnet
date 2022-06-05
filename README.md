@@ -69,4 +69,17 @@ namespace PrologAndMath
     }
 }
 ```
+# Generating Executables
+The Prolog.NET compiler can compile Prolog programs into .NET executable assemblies via the /target:exe switch. By default, the executable generated will require having Prolog.NET installed in order to execute; this is because it makes use of the Runtime library (which is installed in the GAC). However, you can provide the /static switch to the compiler to build a static executable that can be executed on a system without the Prolog.NET runtime installed. In Prolog.NET, the main/0 predicate is the entry point of the executable at runtime. For instance, the famous hello world program:
+
+```
+% hello world
+main :- write(‘Hello, World!’), nl.
+```
+compile into an exe through: ```prologc.exe /target:exe hello.pro ```
+
+# Writing .NET code through first-order logic predicates (calling .NET from Prolog)
+
+There are five built-in predicates in Prolog.NET that allow using .NET objects and methods from Prolog: object/2, invoke/3, get_property/3, set_property/3, and ::/2. This section describes how each can be used in a Prolog program. In order to use the object-oriented predicates against classes and objects in an assembly or namespace, the using/1 or assembly/1 directives should be specified. The using/1 predicate takes a .NET namespace as its only argument, while the assembly/1 takes an assembly name. They both load an assembly so that the class types defined in it can be used from Prolog. The following are examples of each:
+
 
