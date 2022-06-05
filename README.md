@@ -10,7 +10,7 @@ Prolog is a logic programming language associated with artificial intelligence a
 
 Prolog.NET provides an implementation of Prolog programming language on the .NET Framework. It includes an enhanced compiler with language extensions and a code generator targeting Microsoftâ€™s Intermediate Language (MSIL).
 
-# Applicable Use Cases
+# Prolog and Logic Programming Use Cases
 Prolog is well-suited for specific tasks that benefit from rule-based logical queries. Prolog is used a lot in NLP, particularly in syntax and computational semantics.
 
 * [Theorem proving](https://courses.cs.washington.edu/courses/cse341/98wi/CurrentQtr/lectures/pro1.pdf)
