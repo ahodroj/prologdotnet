@@ -10,11 +10,6 @@ The purpose of this project is to provide seamless integration between .NET and 
 
 Prolog.NET was developed by Ali M. Hodroj as a senior capstone project at the Oregon Institute of Technology.
 
-# Language Design / Compiler Architecture
-
-The Prolog.NET system consists of a Prolog compiler and a runtime environment. The compiler (prologc.exe) is responsible for compiling Prolog programs into either abstract machine code to be executed by the runtime environment or .NET intermediate language executed directly by the .NET Common Language Runtime. The runtime environment is a .NET implementation of a Warren Abstract Machine with an extended instruction set that facilitates interoperability between Prolog and .NET. Upon installing Prolog.NET, the Compiler libraries as well as the runtime environment will be automatically installed in the Global Assembly Cache (GAC) by the installer.
-
-There are three output formats that a Prolog program can be compiled into using the Prolog.NET compiler: Executables (.exe), Class libraries (.dll), or Abstract Machine files (.xml). Both executables and class libraries will require the runtime environment installed in the global assembly cache in order to execute. However, the compiler also uses the ILMerge utility from Microsoft Research to merge the runtime environment library with the executable or DLL so that they can be run or linked on a system that doesn’t have the runtime environment installed. Abstract machine files are XML files that represent the Prolog programs in Warren Abstract Machine format. These files can be executed using the prolog.exe program, which acts as the main driver for the runtime environment interpreter.
 
 # Compiling Prolog Programs into .NET assemblies
 
@@ -22,7 +17,7 @@ There are two types of assemblies that can be generated using the compiler: dyna
 
 In order to compile a Prolog program into a DLL assembly the /target:dll switch must be specified with the compiler. Every Prolog source code file is compiled into one .NET class. The class name has to be specified via the class/1 directive in the source file. Once compiled, every Prolog predicate is compiled into a public class member method. Since predicates can either be true or false, we set the return types of the compiled methods to be System.Boolean. The examples below show how a compiled Prolog program would look like if reverse-engineered in C#:
 
-## Example: Fibonacci series implementaiton in Prolog
+## Code Example: Fibonacci & Factorial in first-order logic 
 
     :- class('MyMath').
 
@@ -33,4 +28,16 @@ In order to compile a Prolog program into a DLL assembly the /target:dll switch 
     fib(1,1).
     fib(N,F) :- N > 1, N1 is N - 1, N2 is N - 2, fib(N1,F1), fib(N2,F2), F is F1+F2
    
+The class above would be compiled via the following command:
+
+    prologc.exe /target:dll math.pro
+    
+Compiled .NET assembly: 
+    public class MyMath { 
+        public bool factorial(object arg1, object arg2) { /* ... */ } 
+        public bool fib(object arg1, object arg2) { /* ... */ } 
+    }
+
+
+
 
