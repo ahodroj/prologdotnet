@@ -4,10 +4,15 @@ Prolog is a logic programming language associated with artificial intelligence a
 
 Prolog.NET provides an implementation of Prolog programming language on the .NET Framework. It includes an enhanced compiler with language extensions and a code generator targeting Microsoftâ€™s Intermediate Language (MSIL).
 
-# Language Design / Compiler Architecture
-The Prolog.NET system consists of a Prolog compiler and a runtime environment. The compiler (prologc.exe) is responsible for compiling Prolog programs into either abstract machine code to be executed by the runtime environment or .NET intermediate language executed directly by the .NET Common Language Runtime. The runtime environment is a .NET implementation of a Warren Abstract Machine with an extended instruction set that facilitates interoperability between Prolog and .NET. 
+# Applicable Use Cases
+Prolog is well-suited for specific tasks that benefit from rule-based logical queries. Prolog is used a lot in NLP, particularly in syntax and computational semantics.
 
-# Code Examples
+* [link](http://example.com "Title").
+* [link](http://example.com "Title").
+
+
+
+# Language/Compiler Design
 
 ## Fibonacci Series & Factorial implementation in first-order logic (Prolog)
 ```
@@ -31,7 +36,7 @@ public class MyMath {
       public bool fib(object arg1, object arg2) { /* ... */ } 
 }
 ````
-# Data Types and Interoperability
+## Data Types and Interoperability
 Prolog.NET Runtime provides the AbstractTerm class type which is the equivalent of a Prolog variable. AbstractTerm acts as a container for a value obtained after unifying it with a predicate term. In order to use AbstractTerm, the Axiom.Runtime namespace must be used. The following is a list of Prolog and .NET equivalent data types that can be used to call a Prolog predicate:
 
 | Prolog Data Type | .NET Data Type |
@@ -69,7 +74,7 @@ namespace PrologAndMath
     }
 }
 ```
-# Generating Executables
+## Generating Executables
 The Prolog.NET compiler can compile Prolog programs into .NET executable assemblies via the /target:exe switch. By default, the executable generated will require having Prolog.NET installed in order to execute; this is because it makes use of the Runtime library (which is installed in the GAC). However, you can provide the /static switch to the compiler to build a static executable that can be executed on a system without the Prolog.NET runtime installed. In Prolog.NET, the main/0 predicate is the entry point of the executable at runtime. For instance, the famous hello world program:
 
 ```
@@ -78,7 +83,7 @@ main :- write(‘Hello, World!’), nl.
 ```
 compile into an exe through: ```prologc.exe /target:exe hello.pro ```
 
-# Writing .NET code through first-order logic predicates (calling .NET from Prolog)
+## Writing .NET code through first-order logic predicates (calling .NET from Prolog)
 
 There are five built-in predicates in Prolog.NET that allow using .NET objects and methods from Prolog: object/2, invoke/3, get_property/3, set_property/3, and ::/2. This section describes how each can be used in a Prolog program. In order to use the object-oriented predicates against classes and objects in an assembly or namespace, the using/1 or assembly/1 directives should be specified. The using/1 predicate takes a .NET namespace as its only argument, while the assembly/1 takes an assembly name. They both load an assembly so that the class types defined in it can be used from Prolog. The following are examples of each:
 
@@ -88,7 +93,7 @@ using('System.Collections').   % reference a namespcae
 assembly('MyMath.dll').   % reference an assembly
 ```
 
-## Object instantiation
+### Object instantiation
 When the Prolog.NET runtime environment searches for the class type to be instantiated, it first looks in the assemblies that have been loaded via using/1. If not found, it will then look in the assemblies loaded via assembly/1. To instantiate an object from .NET the object/1 built-in predicate is used:
 
 ```
@@ -102,7 +107,7 @@ The first argument is an atom of the class type which is created and bound to th
 arraylist(X) :- object('System.Collections.ArrayList', X). 
 ```
 
-## Calling a Class/Object Method
+### Calling a Class/Object Method
 There are two ways to call methods from Prolog, either using the invoke/3 or ::/2 built-in predicate. The advantage of the latter is that it provides a more OOP-familiar syntax and its method’s return value can be evaluated using the is/2 predicate.
 
 The invoke/3 predicate takes three arguments. The first argument is the object term (or the class type name in case we are invoking a static method). The second argument is a functor representing the method name as well as aguments passed to it. Finally, the third term is unified with the value returned from invoked:
@@ -150,7 +155,7 @@ The ::/2 predicate can be used in an is/2 expression. For example, rew-writing t
 dotnet_add(X,Y,Z) :- object('Calc',O), Z is O::'Add'(X,Y).
 ```
 
-## Getting/Setting Properties
+### Getting/Setting Properties
 You can get and modify that values of class properties, which are responsible for setting and getting non-public variables in a class. The two predicates available to achieve this are: get_property/3 and set_property/3. Both of these predicates are used almost the same way as the invoke/3 predicate. The predicate signatures are:
 
 ```
