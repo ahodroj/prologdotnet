@@ -4,5 +4,5 @@ Prolog is a logic programming language associated with artificial intelligence a
 
 Prolog.NET provides an implementation of Prolog programming language on the .NET Framework. It includes an enhanced compiler with language extensions and a code generator targeting Microsoftâ€™s Intermediate Language (MSIL).
 
-## Please see the [documentation wiki for details]([https://www.swi-prolog.org/pldoc/man?predicate=html//1](https://github.com/ahodroj/prologdotnet/wiki)).
+Please see the [documentation wiki for details]([https://www.swi-prolog.org/pldoc/man?predicate=html//1](https://github.com/ahodroj/prologdotnet/wiki)).
  
