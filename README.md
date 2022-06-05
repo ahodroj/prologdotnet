@@ -1,7 +1,8 @@
 # Table of Contents
 * [What is Prolog?](https://github.com/ahodroj/prologdotnet#overview)
 * [Prolog & Logic Programming Use Cases](https://github.com/ahodroj/prologdotnet/blob/master/README.md#prolog-and-logic-programming-use-cases)
-* [Quickstart]
+* [Quickstart](https://github.com/ahodroj/prologdotnet/blob/master/README.md#quickstart)
+* 
 
 # What is Prolog?
 
