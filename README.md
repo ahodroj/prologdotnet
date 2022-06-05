@@ -2,7 +2,7 @@
 * [What is Prolog?](https://github.com/ahodroj/prologdotnet#overview)
 * [Prolog & Logic Programming Use Cases](https://github.com/ahodroj/prologdotnet/blob/master/README.md#prolog-and-logic-programming-use-cases)
 * [Quickstart](https://github.com/ahodroj/prologdotnet/blob/master/README.md#quickstart)
-* 
+* [Code Examples](https://github.com/ahodroj/prologdotnet/blob/master/README.md#code-examples)
 
 # What is Prolog?
 
